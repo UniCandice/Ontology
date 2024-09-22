@@ -1,0 +1,570 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5/"
+     xml:base="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5">
+        <rdfs:comment>A tutorial ontology for the Pizza domain. By Liyuan LIU</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#isBaseof"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasIngredient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#isIngredientof"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#isToppingof"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#isBaseof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#isBaseof">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#isIngredientof"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#isIngredientof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#isIngredientof"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#isToppingof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#isToppingof">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#isIngredientof"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#AmericanaHotPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#AmericanaHotPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#JalapenoPepperTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PepperoniTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that only has Mozzarella Pepperoni Tomato and JalapenoPepper toppings.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#AmericanaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#AmericanaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PepperoniTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that only has Mozzarella Pepperoni and Tomato toppings.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#AnchovyTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#AnchovyTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#CaperToping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#CaperToping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#CheeseTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#CheeseTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#CheesyPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#CheesyPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#CheeseTopping"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#DeepPanBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#DeepPanBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaBase"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#ThinAndCrispyBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#GreenPepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#GreenPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#HamTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#HamTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#JalapenoPepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#JalapenoPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MeatTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MeatTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MozzarellaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MozzarellaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MozzarellaTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#TomatoTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that only has Mozzarella and Tomato toppings.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MozzarellaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MozzarellaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#CheeseTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MushroomTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MushroomTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#NamedPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#NamedPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#OliveTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#OliveTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#ParmesanTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#ParmesanTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#CheeseTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PepperoniTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PepperoniTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Pizza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaBase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaTopping"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PrawnTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PrawnTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#RedPepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#RedPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SalamiTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SalamiTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SeafoodTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SeafoodTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SohoPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SohoPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#OliveTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#ParmesanTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MozzarellaTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#OliveTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#ParmesanTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#TomatoTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that only has Mozzarella, Tomato Olive and Parmesan toppings.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Spiciness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Spiciness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Hot"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Medium"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Mild"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SpicyBeefTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SpicyBeefTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#ThinAndCrispyBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#ThinAndCrispyBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#TomatoTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#TomatoTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#TunaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#TunaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#VegetableTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#VegetableTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#VegetarianPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#VegetarianPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#hasTopping"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#CheeseTopping"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#VegetableTopping"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Hot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Hot"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Medium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Medium"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Mild -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Mild">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Spiciness"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#AmericanaHotPizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#AmericanaPizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#MozzarellaPizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#SohoPizza"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#Pizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaBase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/liyuan.liu/ontologies/2024/8/Pizza-ontology-5#PizzaTopping"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
