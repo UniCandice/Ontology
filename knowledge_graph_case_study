@@ -1,0 +1,47 @@
+// Materials (Anode & Cathode)
+CREATE (:Material {id: "M1", name: "Graphite", type: "Anode"});
+CREATE (:Material {id: "M2", name: "Silicon", type: "Anode"});
+CREATE (:Material {id: "M3", name: "Silicon/Graphite", type: "Anode"});
+CREATE (:Material {id: "M4", name: "NMC", type: "Cathode"});
+CREATE (:Material {id: "M5", name: "LFP", type: "Cathode"});
+CREATE (:Material {id: "M6", name: "LMFP", type: "Cathode"});
+
+// Formulations
+CREATE (:Formulation {id: "F1", name: "High-energy Li-ion", description: "Optimized for energy density"});
+CREATE (:Formulation {id: "F2", name: "Fast-charging Li-ion", description: "Optimized for fast charging"});
+
+// Formulation Instances
+CREATE (:FormulationInstance {id: "FI1", name: "Formulation_1"});
+CREATE (:FormulationInstance {id: "FI2", name: "Formulation_2"});
+CREATE (:FormulationInstance {id: "FI3", name: "Formulation_3"});
+CREATE (:FormulationInstance {id: "FI4", name: "Formulation_4"});
+CREATE (:FormulationInstance {id: "FI5", name: "Formulation_5"});
+CREATE (:FormulationInstance {id: "FI6", name: "Formulation_6"});
+
+// Battery Components
+CREATE (:BatteryComponent {id: "C1", name: "Anode"});
+CREATE (:BatteryComponent {id: "C2", name: "Cathode"});
+
+// Anode & Cathode Instances
+CREATE (:AnodeInstance {id: "A1", name: "Anode_Instance_1"});
+CREATE (:AnodeInstance {id: "A2", name: "Anode_Instance_2"});
+CREATE (:AnodeInstance {id: "A3", name: "Anode_Instance_3"});
+CREATE (:CathodeInstance {id: "CA1", name: "Cathode_Instance_1"});
+CREATE (:CathodeInstance {id: "CA2", name: "Cathode_Instance_2"});
+CREATE (:CathodeInstance {id: "CA3", name: "Cathode_Instance_3"});
+
+// Battery Cell Type
+CREATE (:BatteryCell {id: "BC_LiIon", type: "Li-ion", capacity: "3000mAh"});
+CREATE (:BatteryCell {id: "BC_NaIon", type: "Na-ion", capacity: "3000mAh"});
+
+// Battery Cell Instances
+CREATE (:BatteryCellInstance {id: "BCI1", name: "BatteryCell_Instance_1"});
+CREATE (:BatteryCellInstance {id: "BCI2", name: "BatteryCell_Instance_2"});
+CREATE (:BatteryCellInstance {id: "BCI3", name: "BatteryCell_Instance_3"});
+
+// Tests
+CREATE (:Test {id: "T1", test_type: "Cycle Life", result: "Passed"});
+CREATE (:Test {id: "T2", test_type: "Thermal Stability", result: "Failed"});
+
+// Defects
+CREATE (:Defect {id: "D1", defect_type: "Overheating", severity: "Very High"});
