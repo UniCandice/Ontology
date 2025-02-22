@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:bat="http://example.org/battery#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/battery#Testing001">
+    <rdf:type rdf:resource="http://example.org/battery#Testing"/>
+    <rdfs:label>Cycle Life Test</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Battery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Battery</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#hasFormulation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/battery#Battery"/>
+    <rdfs:range rdf:resource="http://example.org/battery#Formulation"/>
+    <rdfs:label>hasFormulation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#hasComponent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/battery#Battery"/>
+    <rdfs:range rdf:resource="http://example.org/battery#MaterialComponent"/>
+    <rdfs:label>hasComponent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Electrolyte_Liquid">
+    <rdf:type rdf:resource="http://example.org/battery#Electrolyte"/>
+    <rdfs:label>Liquid Electrolyte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Coating002">
+    <rdf:type rdf:resource="http://example.org/battery#Coating"/>
+    <rdfs:label>Conductive Coating</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Coating">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Coating</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Coating001">
+    <rdf:type rdf:resource="http://example.org/battery#Coating"/>
+    <rdfs:label>Protective Coating</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Battery002">
+    <rdf:type rdf:resource="http://example.org/battery#Battery"/>
+    <rdfs:label>Fast Charge Battery</rdfs:label>
+    <bat:hasComponent rdf:resource="http://example.org/battery#Anode_Graphite"/>
+    <bat:hasComponent rdf:resource="http://example.org/battery#Cathode_LCO"/>
+    <bat:hasComponent rdf:resource="http://example.org/battery#Electrolyte_Liquid"/>
+    <bat:hasComponent rdf:resource="http://example.org/battery#Separator_Polymer"/>
+    <bat:hasFormulation rdf:resource="http://example.org/battery#Formulation002"/>
+    <bat:hasCoating rdf:resource="http://example.org/battery#Coating002"/>
+    <bat:hasTesting rdf:resource="http://example.org/battery#Testing002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Cathode_LCO">
+    <rdf:type rdf:resource="http://example.org/battery#Cathode"/>
+    <rdfs:label>Lithium Cobalt Oxide Cathode</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Battery001">
+    <rdf:type rdf:resource="http://example.org/battery#Battery"/>
+    <rdfs:label>High Energy Battery</rdfs:label>
+    <bat:hasComponent rdf:resource="http://example.org/battery#Anode_Lithium"/>
+    <bat:hasFormulation rdf:resource="http://example.org/battery#Formulation001"/>
+    <bat:hasCoating rdf:resource="http://example.org/battery#Coating001"/>
+    <bat:hasTesting rdf:resource="http://example.org/battery#Testing001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Battery003">
+    <rdf:type rdf:resource="http://example.org/battery#Battery"/>
+    <rdfs:label>Long-life Battery</rdfs:label>
+    <bat:hasComponent rdf:resource="http://example.org/battery#Anode_Silicon"/>
+    <bat:hasComponent rdf:resource="http://example.org/battery#Cathode_NMC"/>
+    <bat:hasComponent rdf:resource="http://example.org/battery#Electrolyte_Solid"/>
+    <bat:hasComponent rdf:resource="http://example.org/battery#Separator_Ceramic"/>
+    <bat:hasFormulation rdf:resource="http://example.org/battery#Formulation003"/>
+    <bat:hasCoating rdf:resource="http://example.org/battery#Coating003"/>
+    <bat:hasTesting rdf:resource="http://example.org/battery#Testing003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Electrolyte_Solid">
+    <rdf:type rdf:resource="http://example.org/battery#Electrolyte"/>
+    <rdfs:label>Solid Electrolyte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Anode_Silicon">
+    <rdf:type rdf:resource="http://example.org/battery#Anode"/>
+    <rdfs:label>Silicon Anode</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Coating003">
+    <rdf:type rdf:resource="http://example.org/battery#Coating"/>
+    <rdfs:label>Durable Coating</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Anode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/battery#MaterialComponent"/>
+    <rdfs:label>Anode</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Formulation002">
+    <rdf:type rdf:resource="http://example.org/battery#Formulation"/>
+    <rdfs:label>Fast Charge Formulation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Testing002">
+    <rdf:type rdf:resource="http://example.org/battery#Testing"/>
+    <rdfs:label>High Current Test</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Cathode_NMC">
+    <rdf:type rdf:resource="http://example.org/battery#Cathode"/>
+    <rdfs:label>Nickel Manganese Cobalt Oxide Cathode</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Testing003">
+    <rdf:type rdf:resource="http://example.org/battery#Testing"/>
+    <rdfs:label>Calendar Life Test</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Formulation001">
+    <rdf:type rdf:resource="http://example.org/battery#Formulation"/>
+    <rdfs:label>Standard Formulation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Electrolyte">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/battery#MaterialComponent"/>
+    <rdfs:label>Electrolyte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Separator_Ceramic">
+    <rdf:type rdf:resource="http://example.org/battery#Separator"/>
+    <rdfs:label>Ceramic Separator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Anode_Graphite">
+    <rdf:type rdf:resource="http://example.org/battery#Anode"/>
+    <rdfs:label>Graphite Anode</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Formulation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Formulation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#hasTesting">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/battery#Battery"/>
+    <rdfs:range rdf:resource="http://example.org/battery#Testing"/>
+    <rdfs:label>hasTesting</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Separator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/battery#MaterialComponent"/>
+    <rdfs:label>Separator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#hasCoating">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/battery#Battery"/>
+    <rdfs:range rdf:resource="http://example.org/battery#Coating"/>
+    <rdfs:label>hasCoating</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Cathode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/battery#MaterialComponent"/>
+    <rdfs:label>Cathode</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Testing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Testing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#MaterialComponent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>MaterialComponent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Separator_Polymer">
+    <rdf:type rdf:resource="http://example.org/battery#Separator"/>
+    <rdfs:label>Polymer Separator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Anode_Lithium">
+    <rdf:type rdf:resource="http://example.org/battery#Anode"/>
+    <rdfs:label>Lithium Anode</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/battery#Formulation003">
+    <rdf:type rdf:resource="http://example.org/battery#Formulation"/>
+    <rdfs:label>Long-life Formulation</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
